@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int s1, s2, s3, s4, s5, totl, per;
+    cout<<"Enter Marks of Mathematics : ";
+    cin>>s1;
+    cout<<"Enter Marks of Physics : ";
+    cin>>s2;
+    cout<<"Enter Marks of Chemistry : ";
+    cin>>s3;
+    cout<<"Enter Marks of English : ";
+    cin>>s4;
+    cout<<"Enter Marks of Computer Science : ";
+    cin>>s5;
+    totl = s1 + s2 + s3+ s4 + s5;
+    per = totl / 5;
+    cout<<"Total Marks Scored is "<<totl<<".....!!!!"<<endl;
+    cout<<"Percentage Marks is "<<per<<"%";
+    return 0;
+}
