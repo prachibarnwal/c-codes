@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int p, r, t,si;
+    cout<<"Enter the Principle Amount : ";
+    cin>>p;
+    cout<<"Enter the Rate of Interest : ";
+    cin>>r;
+    cout<<"Enter the Time Period(in years) : ";
+    cin>>t;
+    si = (p * r * t) / 100;
+    cout<<"Simple Interest of amount "<<p<<" with rate of interest "<<r<<" in "<<t<<" years is "<<si;
+    return 0;
+}
