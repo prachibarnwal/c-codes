@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int otp;
+    cout<<"Enter OTP : ";
+    cin>>otp;
+    if (otp == 1001)
+        cout<<"OTP Matched....!!!"<<endl;
+    else
+        cout<<"Wrong OTP >__<";
+        
+    return 0;
+}
