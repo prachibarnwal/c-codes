@@ -1,0 +1,66 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+class BankAccount
+{
+    int Bal;
+    char name[30];
+    public:
+    void input(){
+        cout<<"Enter Balance : ";
+        cin>>Bal;
+        cout<<"Enter Name : ";
+        cin>>name;
+    }
+    void show(){
+        cout<<"Name is : "<<name<<"  Balance is : "<<Bal<<endl;
+    }
+    void withdraw(){
+        int wiamount;
+        cout<<"Enter the Amount to be Withdrawn : ";
+        cin>>wiamount;
+        if (wiamount<Bal)
+            cout<<"Remaining Amount : "<<Bal - wiamount<<endl;
+        else
+            cout<<"INSUFFICIENT AMOUNT";
+    }
+    void deposit(){
+        int damount;
+        cout<<"Enter the Amount to be Deposited : ";
+        cin>>damount;
+        cout<<"Current Amount : "<<Bal + damount<<endl;
+    }
+    
+};
+
+int main()
+{
+    int ch;
+    BankAccount a;
+    a.input();
+    a.show();
+    
+    cout<<"Press 1 - to withdraw"<<endl;
+    cout<<"Press 2 - to deposit"<<endl;
+    cout<<"Press 3 - to show current balance"<<endl;
+    cout<<"Enter Your Choice : ";
+    cin>>ch;
+    if (ch == 1)
+        a.withdraw();
+    else if (ch == 2)
+        a.deposit();
+    else if(ch == 3)
+        a.show();
+    else
+        cout<<"YOU WERE GIVEN WITH 3 CHOICES ONLY -___";
+        
+    return 0;
+}
