@@ -1,0 +1,46 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+class Rectangle
+{
+    int ln,br;
+    public:
+    void input(){
+        cout<<"Enter Length ";
+        cin>>ln;
+        cout<<"Enter Breadth ";
+        cin>>br;
+    }
+    void show(){
+        cout<<"Length is  "<<ln<<"  Breadth is "<<br<<endl;
+    
+    }
+    void area(){
+        cout<<"Area is : "<<ln*br<<endl;
+    }
+    void per(){
+        cout<<"Perimeter is : "<<2 * (ln + br)<<endl;
+    }
+};
+
+int main()
+{
+    Rectangle a,b;
+    a.input();
+    a.show();
+    a.area();
+    a.per();
+    b.input();
+    b.show();
+    b.area();
+    b.per();
+    return 0;
+}
