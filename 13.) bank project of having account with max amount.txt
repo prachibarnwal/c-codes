@@ -1,0 +1,68 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+class BankAccount
+{
+    float Bal;
+    int accno;
+    char name[30];
+    public:
+    void input(){
+        cout<<"Enter Account Number : ";
+        cin>>accno;
+        cout<<"Enter Name : ";
+        cin>>name;
+        cout<<"Enter Balance : ";
+        cin>>Bal;
+    
+    }
+    void show(){
+        cout<<"ACCOUNT NUMBER IS : "<<accno<<endl;
+        cout<<"Name is : "<<name<<endl;
+        cout<<"Balance is : "<<Bal<<endl;
+    }
+    
+    float getBalance()
+    {
+        return Bal;
+    }
+    char* getName()
+    {
+        return name;
+    }
+    void setBalance(float bal)
+    {
+        Bal = bal;
+    }
+    
+};
+
+int main()
+{
+    int ch;
+    BankAccount a,b;
+    a.input();
+    b.input();
+    if (a.getBalance() > b.getBalance())
+    {
+        cout<<a.getName()<<" Has More Balance."<<endl;
+        b.setBalance(a.getBalance());
+        
+    }
+    else
+    {
+        cout<<b.getName()<<" Has More Balance."<<endl;
+        a.setBalance(b.getBalance());
+    }
+    a.show();
+    b.show();
+    return 0;
+}
