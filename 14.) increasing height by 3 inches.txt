@@ -1,0 +1,46 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+class Height
+{
+    private:
+    int feet,inches;
+    public:
+    void input()
+    {
+        cout<<"Enter Feet and Inches : ";
+        cin>>feet>>inches;
+    }
+    void show()
+    {
+        cout<<"Height is "<<feet<<" ft. "<<inches<<" in. "<<endl;
+    }
+    void increase(int x)
+    {
+        inches += x;
+        if(inches>=12)
+        {
+            inches -= 12;
+            feet++;
+        }
+    }
+    
+};
+
+int main()
+{
+    Height a;
+    a.input();
+    a.show();
+    a.increase(3);
+    a.show();
+    return 0;
+}
